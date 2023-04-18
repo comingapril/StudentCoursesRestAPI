@@ -1,11 +1,11 @@
 pipeline {
     agent { label 'docker'}
-    triggers { pollSCM('* * * * *') }
+    triggers { pollSCM('* 23 * * 1-5') }
     stages {
         stage('vcs') {
             steps {
                 git url: 'https://github.com/comingapril/StudentCoursesRestAPI.git',
-                    branch: 'develop' 
+                    branch: 'sprint_1_release' 
             }
         }
         stage('build') {
