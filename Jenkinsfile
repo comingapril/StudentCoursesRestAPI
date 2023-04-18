@@ -1,4 +1,4 @@
-pipelie {
+pipeline {
     agent { label 'docker'}
     triggers { pollSCM('* * * * *') }
     stages {
